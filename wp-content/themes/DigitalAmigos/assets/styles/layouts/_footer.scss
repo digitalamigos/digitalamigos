@@ -1,0 +1,21 @@
+/**
+ * Footer
+ *
+ */
+
+.site-footer {
+    background: $black;
+    padding-top: 1.125rem; /* 36/32 */
+    padding-bottom: 1.125rem; /* 36/32 */
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+
+        .footer-logo {
+            width: 11.1111111111rem; /* 200/18 */
+        }
+    }
+    @include media-breakpoint-up(lg) {
+        text-align: left;
+    }
+}

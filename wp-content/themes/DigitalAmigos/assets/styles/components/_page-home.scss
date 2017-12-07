@@ -1,0 +1,139 @@
+/**
+ * Others
+ *
+ */
+
+
+//
+// Team Members
+//
+.team-member {
+    position: relative;
+}
+.team-member__image {    
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.team-member__pic {
+    background-color: lighten($brand-dark-gray,10%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-top: 70%;
+    height: 0;
+    transition: transform .3s ease-out;
+
+    @include media-breakpoint-up(sm) {
+        padding-top: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: 0;
+        height: 100%;
+    }
+
+    &:hover {
+        transform: scale(1.2);        
+    }
+}
+.team-member__details {
+    padding: 5% 10%;
+}
+.team-member__position {
+    margin-bottom: 1rem;
+}
+.team-description__toggler {
+    font-size: 1.5rem;
+    color: #fff;
+
+    .fa {
+        color: #fff;
+        font-size: 2rem;
+        vertical-align: bottom;
+        margin-left: .5rem;
+    }
+
+    &:focus,
+    &:hover {
+        color: #fff;
+    }
+}
+.team-member__description {
+    @include media-breakpoint-up(lg) {
+        font-size: 0.625rem; /* 20/32 */
+    }
+}
+.team-member__description.collapse {
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+}
+
+//
+// Services
+//
+.service-item__title {
+    position: relative;
+    padding-left: 1.25rem; /* 40/32 */
+    display: inline-block;    
+    font-weight: 500;
+    text-transform: uppercase;    
+
+    @include media-breakpoint-down(md) {
+        font-size: 2rem;
+        display: block;
+        position: relative;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: 1.65625rem; /* 53/32 */
+    }
+
+    &:before {
+        content: "";
+        background-image: url(../images/service-icon.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 1rem; /* 32/32 */
+        height: 1rem; /* 32/32 */
+        display: block;
+        position: absolute;        
+        left: 0;
+        top: .45rem;
+    }
+}
+.service-item__details {    
+    line-height: 1.25;
+
+    @include media-breakpoint-down(md) {
+        font-size: 1.5rem;
+    }
+    @include media-breakpoint-up(lg) {        
+        font-size: 0.9375rem; /* 30/32 */
+
+        &.collapse {
+            display: block;
+        }
+    }
+}
+.service-item__toggler {
+    color: #fff;
+    display: block;
+    position: relative;
+
+    @include media-breakpoint-up(lg) { 
+        pointer-events: none;
+        cursor: default;
+    }
+
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+
+    .fa {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

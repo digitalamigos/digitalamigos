@@ -1,0 +1,17 @@
+/**
+ * Sections
+ *
+ */
+
+.section {
+    padding-top: 2.8125rem; /* 90/32 */
+    padding-bottom: 2.8125rem; /* 90/32 */
+
+    &.bg-white b,
+    &.bg-white strong {
+        color: #404040;
+    }
+}
+.section-title {
+    margin-bottom: 1.25rem; /* 40/32 */
+}

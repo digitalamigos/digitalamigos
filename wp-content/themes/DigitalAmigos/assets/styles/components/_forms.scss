@@ -1,0 +1,98 @@
+/**
+ * Forms
+ *
+ */
+
+//
+// Contact Form
+//
+.contact-form {
+    .form-control {
+        font-size: 1.25rem; /* 40/32 */
+        font-weight: 300;
+        color: $black;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid $black; /* 2/32 */
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+
+        &:focus {
+            border-color: #51637b;
+        }
+    }
+    ::placeholder {
+        color: $black;
+    }
+
+    br {
+      display: none; 
+    }
+    .input-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: block;
+
+        &::before {
+            content: "";
+            height: 4px;
+            width: 100%;
+            display: block;
+            background-color: $brand-primary;
+            position: absolute;
+            bottom: 0;
+            transform: translate3d(-100%,0,0);
+        }
+        &.focused::before {
+            transform: translatez(0);
+        }
+        &.valid input,
+        &.valid textarea {
+            border-color: $black; 
+        }
+        &.invalid input,
+        &.invalid textarea {
+            border-color: $black;
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+        position: relative;
+        display: block;
+    }
+    .wpcf7-not-valid-tip {
+        font-size: 10px;
+        position: absolute;
+        font-size: 10px;
+    }
+    .wpcf7-response-output {
+        text-align: center;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+    .wpcf7-validation-errors {
+        color: $red;
+    }
+}
+
+
+
+//
+// Search Form
+//
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-secondary;
+}

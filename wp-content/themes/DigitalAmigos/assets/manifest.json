@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "nextparticle.min.js": {
+      "files": [
+        "scripts/nextparticle.min.js"
+      ]
+    }
+  },
+  "config": {
+    "devUrl": "http://bedrock.dev/wp-digitalamigos/web"
+  }
+}

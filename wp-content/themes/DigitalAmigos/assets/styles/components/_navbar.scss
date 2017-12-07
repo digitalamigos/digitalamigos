@@ -1,0 +1,113 @@
+/**
+ * Navbar
+ *
+ */
+
+.navbar {
+    @include media-breakpoint-up(lg) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+//
+// Navbar Brand
+//
+.navbar-brand {
+    line-height: 1;
+    padding: 0;
+
+    @include media-breakpoint-down(md) {
+        width: auto;
+        max-width: 50%;
+    }
+    
+    &, img {
+        display: block;
+    }
+}
+
+//
+// Navbar Nav
+//
+.navbar-nav {
+    background-color: $black;
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+    @include media-breakpoint-up(lg) {
+        background-color: transparent;
+    }
+    .nav-link {
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+}
+
+/* navbar toggler */
+.navbar-toggler {
+    padding: 0;
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    color: transparent;
+    z-index: 1050;
+    border: 0;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+/* navbar toggler icon */
+.navbar-toggler-icon {
+    &,
+    &:before,
+    &:after {
+        position: absolute;
+        display: inline-block;
+        height: .10rem; 
+        width: 2rem;
+        background: $brand-primary;
+        border-radius: 0;
+    }
+
+    & {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: 0;
+        transition: background .2s;
+    }
+    &:before {
+        top: -.5rem; /* 10/20 */         
+    }
+    &:after {
+        top: .5rem; /* 10/20 */
+    }
+    &:before,
+    &:after {
+        content: '';
+        right: 0;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        transform-origin: 0% 50%;
+        transition: transform .2s;
+    }
+
+    /* nav is visible */
+    .nav-is-visible & {
+        background: rgba(255, 255, 255, 0);
+    }
+    .nav-is-visible &:before {
+        transform: translateX(.2rem) translateY(-.2rem) rotate(45deg);
+    }
+    .nav-is-visible &:after {
+        transform: translateX(.2rem) translateY(.2rem) rotate(-45deg);
+    }
+}

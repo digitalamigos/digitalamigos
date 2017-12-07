@@ -1,0 +1,19 @@
+/**
+ * Header
+ *
+ */
+
+.site-header {
+    background: $black;
+    .page-template-page-home &.headroom {
+        position: fixed;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+    .page-template-page-home &.headroom--not-top {
+        background-color: rgba(0,0,0,.9);
+    }
+}

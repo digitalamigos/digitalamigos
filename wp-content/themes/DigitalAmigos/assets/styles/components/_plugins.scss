@@ -1,0 +1,44 @@
+/**
+ * Plugins
+ *
+ */
+
+
+//
+// Headroom JS
+//
+
+// .headroom {
+//     will-change: transform;
+//     transition: transform 200ms ease;
+// }
+// .headroom--pinned {
+//     transform: translateY(0%);
+// }
+// .headroom--unpinned {
+//     transform: translateY(-100%);
+// }
+
+
+//
+// SLICK SLIDER
+//
+
+.slick-slide {
+    display: none;
+}
+.slick-initialized,
+.slick-slide:first-child { 
+    display: block; 
+}
+.slick-slider,
+.slick-list,
+.slick-track,
+.slick-slide,
+.slick-slide div {
+
+    .hero-slider &,
+    .parallax-slider & {
+        height: 100%
+    }
+}
